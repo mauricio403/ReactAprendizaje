@@ -1,28 +1,34 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 import { useState } from 'react'
+import { AddCategory } from './components/AddCategory'
+import { GifGrid } from './components/GifGrid'
 
 export const GifExpertApp = () => {
 
-    // const categorias = ['One Punch', 'Saint Seya', 'Dragon Ball']
 
-    const [categories, setcategories] = useState(['One Punch', 'Saint Seya', 'Dragon Ball'])
+    const [categories, setCategories] = useState([ 'Dragon Ball'])
 
-    const handleAdd = () => {
-        // setcategories( [...categories, 'alma de oro'] ); //primera froma de añadir
-        setcategories(cats => [...cats, 'alma de oro']) //el cats es el valor de estado anterior y seeguido del nuevo
+    // const handleAdd = () => {
+    //     // setcategories( [...categories, 'alma de oro'] ); //primera froma de añadir
+    //     setcategories(cats => [...cats, 'alma de oro']) //el cats es el valor de estado anterior y seeguido del nuevo
 
-    }
+    // }
+    
     return (
         <>
             <h2>GifExpertApp</h2>
+
+            <AddCategory  setCategories = { setCategories }></AddCategory>
             <hr />
 
-        <Button variant="contained" color="primary" onClick={handleAdd}>Agregar</Button>
+       
             <ol>
                 { 
-                  categories.map( (category)=> {
-                    return <li key={category}> {category}</li>
+                  categories.map( (category) => {
+                    return <GifGrid 
+                    key = {category}
+                    category = {category}></GifGrid>
                   } )  
                 }
             </ol>
