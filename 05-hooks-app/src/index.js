@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+// import { TodoApp } from './components/08-useReducer/TodoApp';
+import { App } from './components/DeberPablo/Deberpablo';
 // import { Callbackhook } from './components/06-memos/Callbackhook';
 // import { Padre } from './components/07-tarea-memo/Padre';
 // import { MemoHook } from './components/06-memos/MemoHook';
@@ -18,7 +19,7 @@ import { TodoApp } from './components/08-useReducer/TodoApp';
 
 
 ReactDOM.render(
-     <TodoApp/>,
+     <App/>,
   document.getElementById('root')
 );
 

@@ -10,9 +10,12 @@ const HolamundoScreen = () => {
         <Text style={{
             fontSize: 45,
             textAlign: 'center'
-        }}>Aprende una vez, escribelo donde quieras!</Text>
+        }}>Hola Mundo desde React Native</Text>
         </View>
     )
 }
 
 export default HolamundoScreen
+
+
+//rnfe snipet para crear fc
